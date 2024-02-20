@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jupyter-Notebook installation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+            <script src="copy.js"></script>
+    <link rel="stylesheet" href="software.css">
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+ 
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+        }
+         h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+  h5{
+  font-size:18px;
+  }
+  .main{
+ height:8000px;
+  }
+  
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+     <h1 data-aos="fade-up"style="color:#eb8f34;">Install Jupyter Notebook on Ubuntu</h1>
+        <!--1-->
+        <h2 data-aos="fade-up">Step 1: Update/Upgrade Package Repository
+
+</h2>
+        <p data-aos="fade-up">
+
+Update the system package repository to ensure you are installing the latest MySQL release.
+<p data-aos="fade-up">1. Open the terminal and run the following command:
+</p>
+<div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt update</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+<p data-aos="fade-up">2. Enter your password and wait for the update to finish.
+</p>
+<p data-aos="fade-up">3. Next, run:
+</p>
+<div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt upgrade</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+ <p data-aos="fade-up">4. Enter Y when prompted to continue with the upgrade and hit ENTER. Wait for the upgrade to finish.
+</p>       
+        <!--2-->
+  
+        <h2 data-aos="fade-up">Step 2: Install Python on Your System
+</h2>
+        <p data-aos="fade-up">
+Run the following pip command to install Python 3 and any other required dependency packages.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt install python3-pip python3-dev
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+        <a href="sspics/jup1.png">
+        <img src="sspics/jup1.png" alt="Thumbnail Image">
+    </a>
+    <h2 data-aos="fade-up">3. Upgrade PIP and install virtualenv
+</h2>
+       <p data-aos="fade-up">Once the above-given commands are completed, both Python3 and PIP3 will be on your system. Now, let’s first upgrade our system’s default PIP version to the latest one.</p>
+           <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo pip3 install --upgrade pip
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+   <a href="sspics/jup2.png">
+        <img src="sspics/jup2.png" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+After that also install virtualenv package, a tool for creating isolated virtual python environments.</p>
+<div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo pip3 install virtualenv
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+         <a href="sspics/jup3.png">
+        <img src="sspics/jup3.png" alt="Thumbnail Image">
+    </a>
+        
+        <h2 data-aos="fade-up">4. Create a Python virtual environment for Jupyter
+</h2>
+        <p data-aos="fade-up">
+         Instead of installing Jupyter globally, let’s create an isolated Python environment for it.  Therefore, here we are creating our project directory called – notebook you can name the folder whatever you want.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">mkdir notebook</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+          <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">cd notebook</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+   <a href="sspics/jup4.png">
+        <img src="sspics/jup4.png" alt="Thumbnail Image">
+    </a>
+  
+       <p data-aos="fade-up">Let’s give it a name- jupyter_env, of course, you can assign a name whatever you want.</p>
+          <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">virtualenv jupyter_env
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+       
+       <p data-aos="fade-up">Now, activate and load the created python environment for your current shell.</p>
+      <a href="sspics/jup5.png">
+        <img src="sspics/jup5.png" alt="Thumbnail Image">
+    </a>
+    <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">source jupyter_env/bin/activate
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+       
+        <p data-aos="fade-up">You will see that your bash shell has been switched to your created environment.</p>
+        <a href="sspics/jup6.png">
+        <img src="sspics/jup6.png" alt="Thumbnail Image">
+    </a>
+     
+       <h2 data-aos="fade-up">5. Install Jupyter Notebook on Ubuntu 20.04
+</h2>
+<p data-aos="fade-up">Finally, use Python’s PIP package manager to install Jupyter on your Ubuntu Linux for the created environment.
+</p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">pip install jupyter
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+       
+   <a href="sspics/jup7.png">
+        <img src="sspics/jup7.png" alt="Thumbnail Image">
+    </a>
+      <h2 data-aos="fade-up">6. How to open the Jupyter Notebook Web interface
+</h2>
+        <p data-aos="fade-up">
+Once the installation is completed, execute the given command that will open the web interface on your local browser to access your Jupyter Notebook project.
+        </p>
+               <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">jupyter notebook
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+ 
+   <a href="sspics/jup8.png">
+        <img src="sspics/jup8.png" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">To create a new notebook file, select New > Python 3 given on the right side and start writing your code.
+</p>
+ <a href="sspics/jup9.png">
+        <img src="sspics/jup9.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/jup10.png">
+        <img src="sspics/jup10.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/jup11.png">
+        <img src="sspics/jup11.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/jup12.png">
+        <img src="sspics/jup12.png" alt="Thumbnail Image">
+    </a>
+     
+       </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up / in page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signstyle.css">
+</head>
+
+<body>
+   
+    <div class="container">
+                   
+        <div class="left">     <center>   <h1 class="title"style="color: #c37e7e;font-size:45px;padding-top:20px;">SoftwareHub</h1></center><br></div>
+                <div class="right">
+               
+            <div class="switchs">
+                <button class="switchlink" onclick="openForm(event, 'SignUp')" id="defaultOpen"> Sign Up</button>
+                <button class="switchlink" onclick="openForm(event, 'LogIn')">Log In</button>
+            </div>
+            
+            <div class="switch-container">
+                              
+                <div id="SignUp" class="switchcontent">
+
+                    <h1 class="title">Sign Up for Free</h1>
+                    <form method='POST' name='SignUp' data-netlify="true" action="./Connect.php">
+                        <div class="field-wrap">
+                            <input name="Login_name" type="text" id="email" required autocomplete="off" />
+                            <label for="email">Email/Login</label>
+                        </div>
+                        <div class="field-wrap">
+                            <input name="Login_pass" type="password" id="password" required autocomplete="off" />
+                            <label for="password">Set A Password</label>
+                        </div>
+                        <button type="submit" class="actionbtn" />Get Started</button>
+                    </form>
+                </div>
+                <div id="LogIn" class="switchcontent">
+                    <h1 class="title">Welcome Back!</h1>
+                    <form method='POST' name='login' data-netlify="true" action="./Connection.php">
+                        <div class="field-wrap">
+                            <input  type="text" id="signInEmail" required autocomplete="off" name="Login_name"/>
+                            <label for="signInEmail">Email Address</label>
+                        </div>
+                        <div class="field-wrap">
+                            <input  type="password" id="signInPswd" required autocomplete="off" name="Login_pass"/>
+                            <label for="signInPswd">Password</label>
+                        </div>
+                        <p class="forgot"><a href="forgot.html">Forgot Password?</a></p>
+                        <button type="submit" class="actionbtn" />Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

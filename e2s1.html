@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software List</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Styles for the navbar */
+        .navbar {
+            background-color: #f5c367;
+            color:white;
+            padding: 15px;
+            text-align: center;
+        font-family: "Poppins", sans-serif;
+               display:flex;
+        }
+  .navbar ul{
+ list-style:none;
+  text-align:left;
+  }
+  .navbar a{
+    color:#51a1d6;
+      text-decoration:none;
+      font-size:26px;
+        font-family: "Poppins", sans-serif;
+    }
+        /* Styles for the software list */
+     .navbar h1{
+       text-align:center;
+       padding-left:180px;
+       }
+  
+
+        /* Styles for the large div boxes */
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+   .container{
+   display:flex;
+   }
+        .image-box {
+            width: 900px;
+            height: 350px;
+            border: 1px solid #ccc;
+            margin-left: 100px;
+            margin-top:20px;           
+            display:flex;
+            position:absolute; 
+            transition: 0.5s;     
+                        border-radius:20px;
+        }
+   img{
+   width:500px;
+   height:350px;
+      border-radius:20px;
+   }
+   .image-box:hover {
+              transform: scale(1.07);
+        }
+
+ p {
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px; 
+    line-height: 2.0;
+    color:#eb8f34; 
+    padding-left:5px;
+}
+i{
+   font-family: 'Roboto', sans-serif;
+   line-height:2.0;
+   color:#750460;
+   font-size:20px;
+   padding-left:10px;
+   }
+
+
+    </style>
+    <script>
+$(document).ready(function() {
+      // Define initial positions for the divs
+      $('#leftDiv').css({'left': '-100px', 'top': '20%'});
+      $('#rightDiv').css({'right': '-100px', 'top': '84%'});
+           $('#leftDiv1').css({'left': '-100px', 'top': '149%'});
+                 $('#rightDiv1').css({'right': '-100px', 'top': '214%'});
+      // Animate the left div to slide in from the left
+      $('#leftDiv').show().animate({ left: '120px' }, 1000);
+
+      // Animate the right div to slide in from the right
+            $('#rightDiv').show().animate({ right: '230px' }, 1000);
+          $('#leftDiv1').show().animate({ left: '120px' }, 1000);
+                      $('#rightDiv1').show().animate({ right: '230px' }, 1000);
+    });
+    </script>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar" id="h">
+       <ul>
+       <li> <a href="index.php">SoftwareHub</a></li>
+       </ul>
+        <h1>Engineering-2 Semester-1</h1>
+    
+    </div>
+
+    <!-- Software List -->
+
+    <!-- Large div boxes for images -->
+    <a href="sql.html">
+    <div class="container">
+    <div class="image-box" id="leftDiv">
+           
+           <img src="imagesoft/mysql.png" alt="Image 1"></a>
+            <div>
+   <p>DataBase Management System Lab-MySql</p>
+<i>We are providing the steps to installation of MySql.The application is used for data warehousing, e-commerce, and logging applications.<br>To Go Through It...<a href="php.html">Click Here</a></i>
+</div>
+        </div>
+ <a href="plsql.html">
+    <div class="image-box"id="rightDiv" class="sliding-div">
+            
+           <img src="imagesoft/plsql.png" alt="Image 1"></a>
+            <div>
+   <p>DataBase Management System Lab-PlSql</p>
+<i>We are providing the steps to run Plsql programs. PL/SQL program units are compiled by the Oracle Database server and stored inside the database.<br>To Go Through It...<a href="logisim.html">Click Here</a></i>
+</div>
+        </div>
+
+  <a href="temp.html"><div class="image-box" id="leftDiv1">
+            
+           <img src="imagesoft/c-programming.jpg" alt="Image 1"></a>
+            <div>
+<p>Design and Analysis of Algorithms Lab -C Language</p>
+<i>We are providing the steps to install the GCC compiler to compile and run the C Programming Language<br>To Go Through It...<a href="temp.html">Click Here</a></i>
+</div>
+        </div>
+        </div>
+      <a href="java.html">
+    <div class="container">
+    <div class="image-box" id="rightDiv1">
+           
+           <img src="imagesoft/java.png" alt="Image 1"></a>
+            <div>
+   <p>Design and Analysis of Algorithms-Java Programming Language</p>
+<i>We are providing the steps to installation of JRE to compile and run the JAVA Programming Language<br>To Go Through It...<a href="java.html">Click Here</a></i>
+</div>
+        </div>
+</body>
+</html>

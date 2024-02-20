@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ciscoPackettracer Installation</title>
+        <script src="copy.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="software.css">
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+                   font-family: "Poppins", sans-serif;
+        }
+        h2{
+          font-family:  'Arial', sans-serif; 
+          }
+           h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+        <h1 data-aos="fade-up" style="    color:#51a1d6;">Introduction</h1>
+        <!--1-->
+        <p data-aos="fade-up">
+        Cisco Packet Tracer is officially developed and designed by the well-known company Cisco. This tool offers a network simulation to practice and design simple and also complex network structures. One of the main purposes of Cisco Packet Tracer is to help the students and professionals the flavor to networking with all the hands-on experiences.  Since the protocols are implemented in the software-only method, this tool cannot replace the hardware Routers or Switches. In this article, we will be looking into the steps of installing the Cisco Packet Tracer in the Linux operating system
+        </p>
+        <h1 data-aos="fade-up" style="color:#eb8f34;"> Installing Cisco Packet Tracer on Linux</h1>
+        <p data-aos="fade-up">
+            To install Cisco Packet Tracer on Linux OS follow the following steps: <br><br>
+            <b>Step 1:</b> Open your web browser and visit the Netacad website. Enter your login credentials or create an account on the website. Then, click on the Download Packet Tracer option from the Resources drop-down menu.
+        </p>
+        <a href="sspics/cis1.png">
+            <img src="sspics/cis1.png">
+        </a><br><br>
+        <p data-aos="fade-up">
+            <b>step-2</b> After scrolling downwards, click on the option <b>Ubuntu Desktop Version 8.1.1</b> English. After clicking the .deb file will be downloaded.
+        </p>
+        
+        <a href="sspics/cis2.png">
+            <img src="sspics/cis2.png"></a>
+        <p data-aos="fade-up">
+            <b>step-3:</b>Now, open up the terminal and execute the following command to start the installation process. Make sure you run the following command from the location where the .deb file is located.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo dpkg -i CiscoPacketTracer_811_Ubuntu_64bit.deb</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+        <a href="sspics/cis3.png">
+            <img src="sspics/cis3.png"></a>
+        <p data-aos="fade-up">
+            <b>Step 4:</b> Press Enter to accept the software license agreement.
+        </p>
+        <a href="sspics/cis4.png">
+            <img src="sspics/cis4.png"></a>
+            <p data-aos="fade-up">
+               <b>Step 5:</b> Press Enter on the Yes option to accept the EULA terms.
+            </p>
+        <a href="sspics/cis5.png">
+            <img src="sspics/cis5.png">
+        </a>
+        <p data-aos="fade-up">
+            <b>Step 6:</b>As some of the dependent packages are missing, we have encountered an error.
+        </p>
+        <a href="sspics/cis6.png">
+            <img src="sspics/cis6.png">
+        </a>
+        <p data-aos="fade-up">
+            <b>Step 7:</b>To solve the above error, execute the following command to install the required packages.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo apt install -f</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+        <a href="sspics/cis7.png">
+            <img src="sspics/cis7.png">
+        </a>
+        <p data-aos="fade-up">
+            <b>Step 8:</b> Now, our tool is successfully installed. Launch the tool by using the following command.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">packettracer</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+        <a href="sspics/cis8.png">
+            <img src="sspics/cis8.png">
+        </a>
+        <p data-aos="fade-up">
+            <b>Step 9:</b>Once again enter the credentials which are been registered on the Netacad website.
+        </p>
+        <a href="sspics/cis9.png">
+            <img src="sspics/cis9.png">
+        </a>
+        <br>
+        <p data-aos="fade-up">
+            The tool is ready to be used now.
+        </p>
+        <a href="sspics/cis10.png">
+            <img src="sspics/cis10.png">
+        </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+

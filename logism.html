@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGISM Installation</title>
+        <script src="copy.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="software.css">
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            font-size: 18px;
+        }
+         h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+                   font-family: "Poppins", sans-serif;
+        }
+        h2{
+          font-family:  'Arial', sans-serif; 
+          }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+        <h1 data-aos="fade-up"style="color:#eb8f34;">Introduction</h1>
+        <!--1-->
+        <p data-aos="fade-up">
+            In this tutorial we learn how to install logisim on Ubuntu 22.04
+        </p>
+        <h2 data-aos="fade-up">What is logism?</h2>
+        <p data-aos="fade-up">
+            Logisim is an educational tool for designing and simulating digital logic circuits. With its simple toolbar interface and simulation of circuits as you build them, it is simple enough to facilitate learning the most basic concepts related to logic circuits. With the capacity to build larger circuits from smaller subcircuits, and to draw bundles of wires with a single mouse drag, Logisim can be used (and is used) to design and simulate entire CPUs for educational purposes.
+        </p>
+        <h1 data-aos="fade-up">Installing logism using apt-get</h1>
+        <p data-aos="fade-up">
+            Update apt database with apt-get using the following command. 
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo apt-get update</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+     <p data-aos="fade-up">
+        After running the above command it will ask the password.
+        so enter your password.after entering your password you will get output as follows
+     </p>
+     <a href="sspics/LOG2.png">
+        <img src="sspics/LOG2.png"></a>
+        <br><br>
+        <a href="sspics/LOG11.jpg.jpg">
+            <img src="sspics/LOG11.jpg.jpg"></a>
+        <p data-aos="fade-up">
+            After updating apt database, We can install logisim using apt-get by running the following command:
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo apt-get -y install logism</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+    
+        <p data-aos="fade-up">
+             after completing the installation now check whether the logism is installed in your laptap by searching its name.
+             If it is present /installed in your laptop then it will show you the logisim app 
+        </p>
+        <a href="sspics/LOG3.png">
+            <img src="sspics/LOG3.png"></a>
+            <p data-aos="fade-up">
+                The basic introduction to logism is as follows
+            </p>
+            <video width="1000" height="700" controls>
+                <source src="videoplayback.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+              </video>
+    <p data-aos="fade-up">
+        You can simply follow the above steps in order to install,use the logism.<br>[OR]<br>
+        You can follow the same procedure which is provided in the following video in order to install and use the Logism
+    </p>
+    <video width="1000" height="700" controls>
+        <source src="howtoinstall.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+

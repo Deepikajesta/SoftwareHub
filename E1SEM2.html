@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* Your existing styles remain unchanged */
+    .navbar {
+            background-color: #f5c367;
+            color:white;
+            padding: 15px;
+            text-align: center;
+        font-family: "Poppins", sans-serif;
+               display:flex;
+        }
+  .navbar ul{
+ list-style:none;
+  text-align:left;
+  }
+  .navbar a{
+    color:#51a1d6;
+      text-decoration:none;
+      font-size:26px;
+        font-family: "Poppins", sans-serif;
+    }
+        /* Styles for the software list */
+     .navbar h1{
+       text-align:center;
+       padding-left:180px;
+       }
+  
+
+        /* Styles for the large div boxes */
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .image-box {
+           
+            border: 1px solid #ccc;
+            margin-left: 120px;
+            margin-top:20px;           
+            display:flex;
+        }
+   img{
+   width:700px;
+   height:400px;
+   }
+ p {
+    font-family: 'Arial', sans-serif; 
+    font-size: 24px; 
+    line-height: 2.0;
+    color:#eb8f34; 
+    padding-left:5px;
+}
+i{
+   font-family: 'Roboto', sans-serif;
+   line-height:2.0;
+   color:#750460;
+   font-size:20px;
+   padding-left:10px;
+   }
+        .sliding-div {
+            position: absolute;
+            display: none;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // Animate the left div to slide in from the left
+            $('#leftDiv').css({ 'left': '-500px', 'top': '50%' }).show().animate({ left: '50px' }, 1000);
+
+            // Animate the right div to slide in from the right
+            $('#rightDiv').css({ 'right': '-500px', 'top': '50%' }).show().animate({ right: '50px' }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <!-- Your HTML content remains unchanged -->
+
+    <!-- Large div boxes for images -->
+    <div class="image-box" id="leftDiv" class="sliding-div">
+        <a href="java.html">
+            <img src="imagesoft/java.png" alt="Image 1">
+        </a>
+        <div>
+            <p>Java Lab-Java Programming Language</p>
+            <i>We are providing the steps to installation of JRE to compile and run the JAVA Programming Language<br>To Go Through It...<a href="java.html">Click Here</a></i>
+        </div>
+    </div>
+
+    <div class="image-box" id="rightDiv" class="sliding-div">
+        <a href="java.html">
+            <img src="imagesoft/eclipse.png" alt="Image 1">
+        </a>
+        <div>
+            <p>Java Lab-Java Programming Language</p>
+            <i>We are providing the steps to installation of Eclipse IDE to compile and run the JAVA Programming Language<br>To Go Through It...<a href="java.html">Click Here</a></i>
+        </div>
+    </div>
+
+    <div class="image-box">
+        <a href="temp.html">
+            <img src="imagesoft/c-programming.jpg" alt="Image 1">
+        </a>
+        <div>
+            <p>Data Structures Lab-C Programming Language</p>
+            <i>We are providing the steps to install the GCC compiler to compile and run the C Programming Language<br>To Go Through It...<a href="temp.html">Click Here</a></i>
+        </div>
+    </div>
+</body>
+</html>
+

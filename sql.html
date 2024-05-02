@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MySQL installation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+            <script src="copy.js"></script>
+    <link rel="stylesheet" href="software.css">
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+ 
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+        }
+         h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+  h5{
+  font-size:18px;
+  }
+  .main{
+ height:8000px;
+  }
+  
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+     <h1 data-aos="fade-up"style="color:#eb8f34;">Install MySQL on Ubuntu</h1>
+        <!--1-->
+        <h2 data-aos="fade-up">Step 1: Update/Upgrade Package Repository
+
+</h2>
+        <p data-aos="fade-up">
+
+Update the system package repository to ensure you are installing the latest MySQL release.
+<p data-aos="fade-up">1. Open the terminal and run the following command:
+</p>
+<div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt update</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+<p data-aos="fade-up">2. Enter your password and wait for the update to finish.
+</p>
+<p data-aos="fade-up">3. Next, run:
+</p>
+<div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt upgrade</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+ <p data-aos="fade-up">4. Enter Y when prompted to continue with the upgrade and hit ENTER. Wait for the upgrade to finish.
+</p>       
+        <!--2-->
+  
+        <h2 data-aos="fade-up">Step 2: Install MySQL
+</h2>
+        <p data-aos="fade-up">
+1. After successfully updating the package repository, install MySQL Server by running the following command:
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt install mysql-server
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+   <p data-aos="fade-up">
+2. When asked if you want to continue with the installation, answer Y and hit ENTER.
+        </p>
+        <a href="sspics/sql1.png">
+        <img src="sspics/sql1.png" alt="Thumbnail Image">
+    </a>
+    
+        <p data-aos="fade-up">
+            Type ‘y’ when the command prompt asks “Do you want to continue?” and then press Enter. Thereafter, your installation will begin.
+        </p>
+        <p data-aos="fade-up">
+        The system downloads MySQL packages and installs them on your machine.
+        </p>
+           <p data-aos="fade-up">
+3. Check if MySQL was successfully installed by running:
+        </p>
+           <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">mysql --version</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+   <a href="sspics/sql2.png">
+        <img src="sspics/sql2.png" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+        The output shows which version of MySQL is installed on the machine.
+        </p>
+        <h2 data-aos="fade-up">Step 3: Securing MySQL
+</h2>The MySQL instance on your machine is insecure immediately after installation.
+        <p data-aos="fade-up">
+           1. Secure your MySQL user account with password authentication by running the included security script:
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">sudo mysql_secure_installation</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+   <a href="sspics/sql3.png">
+        <img src="sspics/sql3.png" alt="Thumbnail Image">
+    </a>
+  
+       <p data-aos="fade-up">2. Enter your password and answer Y when asked if you want to continue setting up the <b>VALIDATE PASSWORD</b> component. The component checks to see if the new password is strong enough.</p>
+       <p data-aos="fade-up">
+       3. Choose one of the three levels of password validation:</br>
+
+<i><b>0 - Low.</b> A password containing at least 8 characters.</br>
+<b>1 - Medium. </b>A password containing at least 8 characters, including numeric, mixed case characters, and special characters.</br>
+<b>2 - Strong.</b> A password containing at least 8 characters, including numeric, mixed case characters, and special characters, and compares the password to a dictionary file.</br></br></i>
+Enter <b>0, 1, or 2</b> depending on the password strength you want to set. The script then instructs you to enter your password and re-enter it afterward to confirm.
+</br>
+Any subsequent MySQL user passwords <b>need to match your selected password strength.</b></p>
+        <!--4-->
+        <p data-aos="fade-up">4. Press Y if you are happy with the password or any other key if you want a different one.</p>
+        <a href="sspics/sql6.png">
+        <img src="sspics/sql6.png" alt="Thumbnail Image">
+    </a>
+       <p data-aos="fade-up">5. The script then prompts for the following security features:
+</p>
+<ul>
+<li>Remove anonymous users?</li>
+<li>Disallow root login remotely?</li>
+<li>Remove test database and access to it?</li>
+<li>Reload privilege tables now?</li>
+</ul>
+<p data-aos="fade-up">The recommended answer to all these questions is Y. However, if you want a different setting for any reason, enter any other key.</br>
+
+For example, if you need the remote login option for your server, enter any key other than Y for that prompt.</p>
+       <h2 data-aos="fade-up">Step 4: Check if MySQL Service Is Running
+</h2>Upon successfully installing MySQL, the MySQL service starts automatically.
+<p data-aos="fade-up">Verify that the MySQL server is running by running:
+</p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">sudo systemctl status mysql
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+        <p data-aos="fade-up">The output should show that the service is operational and running:</p>
+   <a href="sspics/sql4.png">
+        <img src="sspics/sql4.png" alt="Thumbnail Image">
+    </a>
+      <h2 data-aos="fade-up">Step 5: Log in to MySQL Server
+</h2>
+        <p data-aos="fade-up">
+      Finally, to log in to the MySQL interface, run the following command:
+        </p>
+               <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">sudo mysql -u root</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+ 
+   <a href="sspics/sql5.png">
+        <img src="sspics/sql5.png" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">Now you can execute queries, create databases, and test out your new MySQL setup
+</p>
+ <a href="sspics/sql7.png">
+        <img src="sspics/sql7.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql8.png">
+        <img src="sspics/sql8.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql9.png">
+        <img src="sspics/sql9.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql10.png">
+        <img src="sspics/sql10.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql11.png">
+        <img src="sspics/sql11.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql12.png">
+        <img src="sspics/sql12.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql13.png">
+        <img src="sspics/sql13.png" alt="Thumbnail Image">
+    </a>
+     <a href="sspics/sql14.png">
+        <img src="sspics/sql14.png" alt="Thumbnail Image">
+    </a>
+<a href="sspics/sql15.png">
+        <img src="sspics/sql15.png" alt="Thumbnail Image">
+    </a>
+       </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+

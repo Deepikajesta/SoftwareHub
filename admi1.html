@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Add Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+        }
+
+        header {
+            background-color: skyblue; 
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40; 
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #007bff; 
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3; 
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        aside {
+            width: 200px;
+            background-color: #6c757d; 
+            padding: 20px;
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #28a745; 
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .users{
+        margin-left:300px;
+        margin-top:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Admin Page</h1>
+    </header>
+    <div class="users">
+  <form method='POST' name='admin' data-netlify="true" action="users.php">
+    <button type="submit" class="actionbtn" name="Loginname">Get User Details</button>
+    </form>
+   </div>
+    <footer>
+        <p> Software Hub</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- Add Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Your existing styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9ecef;
+        }
+
+        header {
+            background-color: skyblue;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        aside {
+            /* width: 200px;
+            background-color: #6c757d; 
+            padding: 20px; */
+        }
+
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+
+
+        #userListContainer {
+            margin-top: 20px;
+        }
+
+        #userListContainer p {
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button.btn-primary {
+        margin-top: 10px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Admin Page</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showDashboard()">Dashboard</a>
+        <a href="#" onclick="showUsers()">Users</a>
+        <a href="#" onclick="showSettings()">Settings</a>
+        <a href="./index.php">Goback</a>
+    </nav>
+
+    <div class="container">
+        <aside>
+            <!-- Add content to the aside if needed -->
+        </aside>
+
+        <section id="dynamicContent">
+            <!-- Content will be dynamically updated here -->
+        </section>
+    </div>
+
+    <footer>
+       
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showDashboard() {
+            document.getElementById("dynamicContent").innerHTML = `
+                <h2>Dashboard</h2>
+                <div class="form-group">
+                    <label for="searchName">Search by Name:</label>
+                    <input type="text" class="form-control" id="searchName" placeholder="Enter name">
+                </div>
+                <button class="btn btn-primary" onclick="checkUsername()">Check</button>
+                <div id="result"></div>
+            `;
+        }
+
+        function checkUsername() {
+            // Get the entered name from the text field
+            var searchName = document.getElementById("searchName").value;
+
+            // Make an AJAX request to check the username
+            // Adjust the URL and method as needed
+            $.ajax({
+                url: "check_username.php", // Assuming check-username.php is in the same directory
+                method: "POST",
+                data: { searchName: searchName },
+                success: function (response) {
+                    // Display the result in the result div
+                    document.getElementById("result").innerHTML = response;
+
+                    // If username is not found, show form to add new user
+                    if (response.trim() !== "Username found!") {
+                        showAddUserForm();
+                    } else {
+                        // If username is found, show buttons for insert and delete
+                        document.getElementById("result").innerHTML += `
+                            <button class="btn btn-success" onclick="insertUser()">Insert</button>
+                            <button class="btn btn-danger" onclick="deleteUser()">Delete</button>
+                        `;
+                    }
+                },
+                error: function (error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+        function showAddUserForm() {
+            document.getElementById("result").innerHTML = `
+                <h4>User not found. Add a new user:</h4>
+                <div class="form-group">
+                    <label for="newLoginName">Login Name:</label>
+                    <input type="text" class="form-control" id="newLoginName" placeholder="Enter login name">
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password:</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="Enter password">
+                </div>
+                <button class="btn btn-primary" onclick="addNewUser()">Submit</button>
+            `;
+        }
+        function addNewUser() {
+    // Get the entered login name and password from the input fields
+    var newLoginName = document.getElementById("newLoginName").value;
+    var newPassword = document.getElementById("newPassword").value;
+
+    // Make an AJAX request to add the new user
+    // Adjust the URL and method as needed
+    $.ajax({
+        url: "insert_user.php", // Assuming add_user.php is in the same directory
+        method: "POST",
+        data: { newLoginName: newLoginName, newPassword: newPassword },
+        success: function (response) {
+            // Display the result in the result div
+            document.getElementById("result").innerHTML = response;
+
+            // After adding the user, show buttons for insert and delete
+            document.getElementById("result").innerHTML += `
+                <button class="btn btn-success" onclick="insertUser()">Insert</button>
+                <button class="btn btn-danger" onclick="deleteUser()">Delete</button>
+            `;
+        },
+        error: function (error) {
+            console.error("Error:", error);
+        }
+    });
+}
+
+
+       
+
+        function insertUser() {
+            // Implement logic for inserting user
+            console.log("Insert user logic");
+        }
+
+        function deleteUser() {
+            // Ask for confirmation
+            var confirmation = confirm("Do you really want to delete this user?");
+
+            // If the user confirms, proceed with deletion
+            if (confirmation) {
+                // Get the entered name from the text field
+                var searchName = document.getElementById("searchName").value;
+
+                // Make an AJAX request to delete the username
+                // Adjust the URL and method as needed
+                $.ajax({
+                    url: "delete_user.php", // Assuming delete_user.php is in the same directory
+                    method: "POST",
+                    data: { searchName: searchName },
+                    success: function (response) {
+                        // Display the result in the result div
+                        document.getElementById("result").innerHTML = response;
+                    },
+                    error: function (error) {
+                        console.error("Error:", error);
+                    }
+                });
+            }
+        }
+
+        function showUsers() {
+            // Make an AJAX request to get users
+            $.ajax({
+                url: "get_users.php",
+                method: "GET",
+                success: function (response) {
+                    document.getElementById("dynamicContent").innerHTML = `
+                        <h2>Users</h2>
+                        <div id="userListContainer">
+                            ${response}
+                        </div>
+                    `;
+                },
+                error: function (error) {
+                    console.error("Error:", error);
+                }
+            });
+        }
+
+        function showSettings() {
+            document.getElementById("dynamicContent").innerHTML = `
+                <h2>Settings</h2>
+                <!-- Add Settings content here -->
+            `;
+        }
+    </script>
+</body>
+
+</html>

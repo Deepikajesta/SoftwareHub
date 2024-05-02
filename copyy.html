@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C installation</title>
+    <script src="copy.js"></script>
+  <link href="assets/css/software.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="a">
+      <h1 class="logo"><a href="index.html">SoftwareHub</a></h1>
+     <center><h1 class="b">C Installation</h1></center>
+</header>    
+<div class="main">
+<center><h1>Steps to Install C Language</h1><br></center>
+
+
+<!--1-->
+<h2>1. Environment for C programming</h2>
+<p>The terminal command prompt is pre-installed in your LINUX operating system. Our task now is to install the GCC compiler using terminal to execute the C programs.
+</p>
+
+<!--2-->
+
+<h2>2. How to install GCC compiler using terminal in Linux?</h2>
+<p>You can find the terminal icon on your Desktop screen. If not, you can find it through the search menu. A shortcut to open terminal is: Press Ctrl + Alt + T.
+
+Open terminal so that we can proceed with the further steps to install the GCC Compiler.<br>
+The main command for installing the GCC compiler using terminal on Ubuntu is:
+</p>
+<div  class="textContainer">
+        <i id="commandText1">sudo apt install GCC
+</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button onclick="copyTextToClipboard('commandText1',this)">Copy</button>
+    </div><br>
+ Here GCC is the C  compiler.<br>
+   <a href="sspics/c1.png">
+        <img src="sspics/c1.png" alt="Thumbnail Image">
+    </a>
+ <p>If you do not have permission to install the GCC compiler, this message would be displayed where you are required to enter the admin password to get the permission granted:<br>
+
+If you have permission, then the installation process will proceed as follows:</p>
+   <a href="sspics/c2.png">
+ <img src="sspics/c2.png"></a>
+<p>Type ‘y’ when the command prompt asks “Do you want to continue?” and then press Enter.
+<br>
+Thereafter, your installation will begin
+</p>
+   <a href="sspics/c3.png">
+ <img src="sspics/c3.png">
+ </a>
+ 
+ <!--3-->
+ 
+ 
+<h2>3. How to check the installed compiler version?</h2>
+<ul>
+<li>You can find the terminal icon on your Desktop screen or on the search menu. A shortcut to open terminal is: Press Ctrl + Alt + T simultaneously.</li>
+<li>Now the terminal will open.</li>
+<li>The ‘gcc’ command will help you throughout your coding journey. It is a very important command that comes pre-installed on your latest Ubuntu version.</li>
+<li>Write the following command to know the version of the GCC compiler that you installed</li><br>
+</ul>
+<div  class="textContainer">
+    <i id="commandText2">GCC -- version</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button onclick="copyTextToClipboard('commandText2',this)">Copy</button>
+    </div><br>
+   <p> ￼After pressing enter, the version of the terminal software would be displayed.</p><br>
+      <a href="sspics/c4.png">
+ <img src="sspics/c4.png">
+ </a>
+<p>This version is 7.4.0
+<br>
+If you don’t see such a message on your display screen, then it probably means that you haven’t successfully installed the GCC compiler.</p>
+
+<!--4-->
+
+
+<h2>4. How to create a C program?</h2>
+<p>In order to create a C program, use the ‘touch’ command and give the name of the file with <u>.c extension</u><br>
+
+But before that, you need to choose the directory you are working on.
+
+
+Most of the programmers generally prefer to work on the Desktop folder as it proves to be quite convenient to write, modify and run your programs instantly.</p>
+
+<i>In order to locate your files on the Desktop folder and to change the reference of the current directory to Desktop, use this command:</i>
+<br><br>
+<div  class="textContainer">
+    <i id="commandText3">cd Desktop</i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <button onclick="copyTextToClipboard('commandText3',this)">Copy</button>
+    </div><br>
+       <a href="sspics/c5.png">
+    <img src="sspics/c5.png"></a><br>
+<p><b >Key takeaway:</b> Commands are case sensitive<br>
+
+The command for creating a program in C is:
+
+<b>touch program.c</b><br>
+
+Now, a file has been created in our Desktop folder called program.c</p><br>
+   <a href="sspics/c6.png">
+    <img src="sspics/c6.png"></a><br>
+   <p>Open this file and write a basic code – <b>“Hello World!”</b></p>
+      <a href="sspics/c7.png">
+    <img src="sspics/c7.png"></a><br>
+   
+<!--5-->
+
+
+<h2>5. How to compile and run a C program?</h2>
+<p>Now that we have created a C program called program.c, it is now time to compile it and run it in terminal.<br>
+To compile the code, we use the GCC command:
+
+<b>GCC program.c -o program</b></p>
+   <a href="sspics/c8.png">
+<img src="sspics/c8.png"></a><br>
+<p>Here, the ‘gcc’ command is followed by the file name with .c extension and ‘-o’ and the name of the executable file, which is, ‘program’ in this case.<br><b>Key takeaway:</b> The executable file name can be different from the source file name<br>
+
+In order to run the program, use the command<br><br>
+
+<b>./program</b><br>
+   <a href="sspics/c9.png">
+<img src="sspics/c9.png"></a><br>
+<p>Here, the period symbol ‘.’ followed by a backslash is followed by the name of the executable file, that is, ‘program’ in this case<br>
+
+The program output would be:</p><br>
+   <a href="sspics/c10.png">
+<img src="sspics/c10.png"></a><br>
+
+</div>
+</body>
+</html>
+
+
+    
+
+
+    

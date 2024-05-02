@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up / in page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signstyle.css">
+</head>
+
+<body>
+   
+    <div class="container">
+        
+        <div class="left"><b style="color:#c37e7e;padding-top:100px;margin-left:150px;font-size:40px;">SoftwareHub</b></div>
+                <div class="right">
+            <div class="switchs">
+                <button class="switchlink" onclick="openForm(event, 'SignUp')" id="defaultOpen"> Sign Up</button>
+                <button class="switchlink" onclick="openForm(event, 'LogIn')">Log In</button>
+                  <button class="switchlink" onclick="openForm(event, 'Admin')">Admin</button>
+            </div>
+            
+            <div class="switch-container">
+                <div id="SignUp" class="switchcontent">
+                    <h1 class="title">Sign Up for Free</h1>
+                    <form method='POST' name='SignUp'  action="Connect.php"onsubmit="return validateForm()">
+                        <div class="field-wrap">
+                            <input name="Login_name" type="text" id="email" required autocomplete="off" />
+                            <label for="email">Email/Login</label>
+                        </div>
+                        <div class="field-wrap">
+                            <input name="Login_pass" type="password" id="password" required autocomplete="off" />
+                            <label for="password">Set A Password</label>
+                        </div>
+                        <button type="submit" class="actionbtn" />Get Started</button>
+                    </form>
+                </div>
+                <div id="LogIn" class="switchcontent">
+                    <h1 class="title">Welcome Back!</h1>
+                    <form method='POST' name='login' action="Connection.php">
+                        <div class="field-wrap">
+                            <input  type="text" id="signInEmail" required autocomplete="off" name="Login_name"/>
+                            <label for="signInEmail">Email Address</label>
+                        </div>
+                        <div class="field-wrap">
+                            <input  type="password" id="signInPswd" required autocomplete="off" name="Login_pass"/>
+                            <label for="signInPswd">Password</label>
+                        </div>
+                        <p class="forgot"><a href="forgot.html">Forgot Password?</a></p>
+                        <button type="submit" class="actionbtn" />Log In</button>
+                    </form>
+                </div>
+                  <div id="Admin" class="switchcontent">
+    <h1 class="title">Admin Login</h1>
+    <form method='POST' name='admin' data-netlify="true" action="adminconnection.php">
+        <div class="field-wrap">
+            <input  type="text" id="adminSignInEmail" required autocomplete="off" name="Login_Name"/>
+            <label for="adminSignInEmail">Email Address</label>
+        </div>
+        <div class="field-wrap">
+            <input  type="password" id="adminSignInPswd" required autocomplete="off" name="Login_pass"/>
+            <label for="adminSignInPswd">Password</label>
+        </div>
+
+        <button type="submit" class="actionbtn">Log In</button>
+    </form>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        function validateForm() {
+            var email = document.forms["SignUp"]["Login_name"].value;
+            var password = document.forms["SignUp"]["Login_pass"].value;
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Password validation
+            var lengthRegex = /^.{6,}$/;
+            var lowercaseRegex = /[a-z]/;
+            var uppercaseRegex = /[A-Z]/;
+            var digitRegex = /\d/;
+            var specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+            if (!lengthRegex.test(password)) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+
+            if (!lowercaseRegex.test(password)) {
+                alert("Password must include at least one lowercase letter");
+                return false;
+            }
+
+            if (!uppercaseRegex.test(password)) {
+                alert("Password must include at least one uppercase letter");
+                return false;
+            }
+
+            if (!digitRegex.test(password)) {
+                alert("Password must include at least one digit");
+                return false;
+            }
+
+            if (!specialCharacterRegex.test(password)) {
+                alert("Password must include at least one special character");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+.top{
+    border:1px solid black;
+    height:150px;
+}
+.top h2 {
+    text-align: center;
+    padding-top:30px;
+    color: brown;
+}
+.top h3{
+    text-align: center;
+    color:green;}
+.mid{
+    border:1px solid black;
+    height:520px;
+}
+.cen{
+    border:1px solid black;
+    height:150px;
+    width:300px;
+    margin-left:450px;
+    margin-top:10px;
+}
+.cen h3{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0%;
+} 
+.cen h4{
+    color:rgb(47, 47, 131);
+}
+table,th,td{
+    border: 1px solid navy;
+    color: navy;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+th{
+    width:550px;
+    text-align: left;
+}
+.a{
+    text-align: center;
+    font-weight: bold;
+}
+.btn{
+  margin-top:20px;}

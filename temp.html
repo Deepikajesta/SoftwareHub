@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C Installation</title>
+        <script src="copy.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="software.css">
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+ h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+        ul {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+                   font-family: "Poppins", sans-serif;
+        }
+        h2{
+          font-family:  'Arial', sans-serif; 
+          }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+        <h1 data-aos="fade-up"style="color:#eb8f34;">Steps to Install C Language</h1>
+        <!--1-->
+        <h2 data-aos="fade-up">1. Environment for C programming</h2>
+        <p data-aos="fade-up">
+            The terminal command prompt is pre-installed in your LINUX operating system. Our task now is to install the GCC compiler using terminal to execute the C programs.
+        </p>
+        <!--2-->
+        <h2 data-aos="fade-up">2. How to install GCC compiler using terminal in Linux?</h2>
+        <p data-aos="fade-up">
+            You can find the terminal icon on your Desktop screen. If not, you can find it through the search menu. A shortcut to open terminal is: Press Ctrl + Alt + T.
+            Open terminal so that we can proceed with the further steps to install the GCC Compiler.
+            The main command for installing the GCC compiler using terminal on Ubuntu is:
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt install GCC</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+        <a href="sspics/c1.png">
+        <img src="sspics/c1.png" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+            If you do not have permission to install the GCC compiler, this message would be displayed where you are required to enter the admin password to get the permission granted:
+        </p>
+<a href="sspics/c2.png">
+ <img src="sspics/c2.png"></a>
+        <p data-aos="fade-up">
+            Type ‘y’ when the command prompt asks “Do you want to continue?” and then press Enter. Thereafter, your installation will begin.
+        </p>
+<a href="sspics/c3.png">
+ <img src="sspics/c3.png">
+ </a>
+        <!--3-->
+        <h2 data-aos="fade-up">3. How to check the installed compiler version?</h2>
+        <p data-aos="fade-up">
+            You can find the terminal icon on your Desktop screen or on the search menu. A shortcut to open terminal is: Press Ctrl + Alt + T simultaneously.
+            Now the terminal will open. The ‘gcc’ command will help you throughout your coding journey. It is a very important command that comes pre-installed on your latest Ubuntu version.
+            Write the following command to know the version of the GCC compiler that you installed.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">GCC -- version</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+ <a href="sspics/c4.png">
+ <img src="sspics/c4.png">
+ </a>
+        <p data-aos="fade-up">
+            This version is 7.4.0. If you don’t see such a message on your display screen, then it probably means that you haven’t successfully installed the GCC compiler.
+        </p>
+        <!--4-->
+        <h2 data-aos="fade-up">4. How to create a C program?</h2>
+        <p data-aos="fade-up">
+            In order to create a C program, use the ‘touch’ command and give the name of the file with .c extension. But before that, you need to choose the directory you are working on.
+            Most of the programmers generally prefer to work on the Desktop folder as it proves to be quite convenient to write, modify, and run your programs instantly.
+        </p>
+        <i data-aos="fade-up">
+            In order to locate your files on the Desktop folder and to change the reference of the current directory to Desktop, use this command:
+        </i>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">cd Desktop</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+ <a href="sspics/c5.png">
+    <img src="sspics/c5.png"></a>
+        <p data-aos="fade-up">
+            <b>Key takeaway:</b> Commands are case sensitive. The command for creating a program in C is:
+        </p>
+        <i data-aos="fade-up">
+            <b>touch program.c</b>
+        </i>
+  <a href="sspics/c6.png">
+    <img src="sspics/c6.png"></a><br>
+        <p data-aos="fade-up">
+            Open this file and write a basic code – <b>“Hello World!”</b>
+        </p>
+<a href="sspics/c7.png">
+    <img src="sspics/c7.png"></a><br>
+        <!--5-->
+        <h2 data-aos="fade-up">5. How to compile and run a C program?</h2>
+        <p data-aos="fade-up">
+            Now that we have created a C program called program.c, it is now time to compile it and run it in terminal. To compile the code, we use the GCC command:
+            <b>GCC program.c -o program</b>
+        </p>
+<a href="sspics/c8.png">
+<img src="sspics/c8.png"></a><br>
+        <p data-aos="fade-up">
+            Here, the ‘gcc’ command is followed by the file name with .c extension and ‘-o’ and the name of the executable file, which is, ‘program’ in this case.
+            <b>Key takeaway:</b> The executable file name can be different from the source file name. In order to run the program, use the command:
+        </p>
+        <b data-aos="fade-up">./program</b>
+ <a href="sspics/c9.png">
+<img src="sspics/c9.png"></a><br>
+        <p data-aos="fade-up">
+            The program output would be:
+        </p>
+ <a href="sspics/c10.png">
+<img src="sspics/c10.png"></a><br>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP installation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="software.css">
+            <script src="copy.js"></script>
+    <style>
+        body {
+            background-color: #fff; 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            color: #333; 
+        }
+
+        header {
+            background-color: #3e50b4; /* Vibrant header background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-family: 'Verdana', sans-serif;
+            margin-bottom: 10px; 
+        }
+
+        .main {
+            max-width: 1000px; 
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            height:7000px;
+        }
+
+        h1, h2, p {
+            font-family: 'Tahoma', sans-serif;
+        }
+
+        .textContainer {
+            display: flex;
+            align-items: center;
+            font-family:'Verdana',sans-serif;
+            padding:20px;
+        }
+
+        .textContainer button {
+            background-color: #3e50b4; 
+            color: #fff;
+            border: none;
+            border-radius:15px;
+            padding: 8px 16px; 
+            cursor: pointer;
+            margin-left: 10px;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .textContainer button:hover {
+            background-color: #5567a7; 
+            
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        ul {
+            font-size: 18px;
+        }
+
+        i {
+            font-size: 17px;
+            font-family: 'Arial', sans-serif; 
+        }
+        p
+        {
+           font-size:18px;
+        }
+         h2{
+    color:#51a1d6;
+            font-family: "Poppins", sans-serif;
+  }
+  h5{
+  font-size:18px;
+  }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="logo"><a href="index.php">SoftwareHub</a></h1>
+    </header>
+    <div class="main">
+     <h1 data-aos="fade-up"style="color:#eb8f34;">Complete Procedure To get all requirements for running PHP Programs in ubuntu</h1>
+        <!--1-->
+        <h2 data-aos="fade-up">1. Environment for PHP programming
+</h2>
+        <p data-aos="fade-up">
+<h5>Step1: Check for system updates if any,by running the following commands
+</h5>
+<p data-aos="fade-up">1. Open the terminal and run the following command:
+</p>
+command: sudo apt-get update
+
+command: sudo apt-get upgrade
+        <!--2-->
+        <h2 data-aos="fade-up"></h2>
+        <p data-aos="fade-up">
+           Install php from your terminal using following command
+           click yes,when it prompts for confirmation.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText1">sudo apt install php</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText1', this)">Copy</button>
+        </div><br>
+
+        <a href="sspics/m1.jpg">
+        <img src="sspics/m1.jpg" alt="Thumbnail Image">
+    </a>
+         <p data-aos="fade-up">
+            If you do not have permission to install the PHP this message would be displayed where you are required to enter the admin password to get the permission granted:
+        </p>
+        <p data-aos="fade-up">
+            Type ‘y’ when the command prompt asks “Do you want to continue?” and then press Enter. Thereafter, your installation will begin.
+        </p>
+   <a href="sspics/m1.jpg">
+        <img src="sspics/m1.jpg" alt="Thumbnail Image">
+    </a>
+        
+        <h2 data-aos="fade-up">3. How to check the installed compiler version?</h2>
+        <p data-aos="fade-up">
+           After Installation,Check whether php is properly installed or not,by checking the version.
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">php -- version</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+        </div>
+   <a href="sspics/m2.jpg">
+        <img src="sspics/m2.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+            This version is 8.1.0. If you don’t see such a message on your display screen, then it probably means that you haven’t successfully installed the php.
+        </p>
+        <!--4-->
+        <h2 data-aos="fade-up">4.Download and install phpmyadmin from terminal by running the following command</h2>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">sudo apt install phpmydadmin</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+   <a href="sspics/m3.jpg">
+        <img src="sspics/m3.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+           click yes,when it prompts for confirmation.
+        </p>
+        <i data-aos="fade-up">
+        <h5> Step6: After clicking yes,it open’s a windows like show in the below image.</h5>
+
+Select apache2 server and click enter
+        </i>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText3">Select apache2 server and click enter</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText3', this)">Copy</button>
+        </div>
+   <a href="sspics/m4.jpg">
+        <img src="sspics/m4.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+           <h5> Step 7: Again another windows opens as shown in the below image.
+
+As we already have mysql installed,we can select option “NO”.</h5>
+        </p>
+        <i data-aos="fade-up">
+            Select option NO
+        </i>
+   <a href="sspics/m5.jpg">
+        <img src="sspics/m5.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+            </b><h5>Step 8: Run the following commands in terminal</h5>
+        </p>
+        <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2"> sudo -H nano /etc/apache2/apache2.conf</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+            </div>
+            <p>
+            An interface will be opened as shown in below image,which is nothing but nano text editor.Move to the last line of the file and add the below command there.
+            </p>
+   <a href="sspics/m6.jpg">
+        <img src="sspics/m6.jpg" alt="Thumbnail Image">
+    </a>
+        <!--5-->
+          <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2"> Include /etc/phpmyadmin/apache.conf</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+            </div>
+              <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2"> /etc/init.d/apache2 restart</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+            </div>
+        <h2 data-aos="fade-up"></h2>
+        <p data-aos="fade-up">
+           After writing the above whole command,enter CTRL+O and press ENTER,and finally CTRL+X.After that you will be returned to general terminal.Enter the below command and enter the password if it prompts for a password.
+            <b></b>
+        </p>
+   <a href="sspics/m7.jpg">
+        <img src="sspics/m7.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+           <h5>Step 9: After runnnig those commands,open any browser that you have and open the url “http://localhost/phpmyadmin/”
+
+Interface will look like this</h5>
+        </p>
+   <a href="sspics/m8.jpg">
+        <img src="sspics/m8.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+          <h5>
+          Step 9: Login with any user credentials, that you have created in MYSQL.After successfull login all of the mysql databases will be shown.</h5>
+        </p>
+   <a href="sspics/m9.jpg">
+        <img src="sspics/m9.jpg" alt="Thumbnail Image">
+    </a>
+        <p data-aos="fade-up">
+           Almost we have made all set to run php programs,just a few left. Run the following command to grant permission to write files in the directory.
+        </p>
+ 
+              <div class="textContainer" data-aos="fade-up">
+            <i id="commandText2">  sudo chmod -R 777 /var/www</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button onclick="copyTextToClipboard('commandText2', this)">Copy</button>
+            </div>
+             
+            
+            <p>
+            Click on the computer and navigate to below mentioned directory.
+
+Save the written php file in the directory “/var/www/html”
+            <p>
+   <a href="sspics/m10.jpg">
+        <img src="sspics/m10.jpg" alt="Thumbnail Image">
+    </a>
+            <p>
+            For example, we have saved a php file name called “sam.php” in the above mentioned directory.
+
+The file contains the following code.
+
+<b>CODE</b>: <?php echo “Welcome to php page”?>
+
+To get the output of the above program, navigate to the url in browser
+
+Structure of url :<b>http://localhost/filename.php</b>
+
+For our example,the url will be:<b> http://localhost/sam.php</b>
+</p>
+            
+     
+            <p> And you will get output like this</p>
+            <b>Welcome to php page</b>
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
+
